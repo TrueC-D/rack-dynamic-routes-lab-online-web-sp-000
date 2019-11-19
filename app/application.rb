@@ -8,7 +8,8 @@ class Application
 
     if req.path.match(/items/)
       item_name = req.path.split("/items/").last
-      if item = Item.all.find{|i| i.name == item_name}
+      item = Item.all.find{|i| i.name == item_name}
+      if item
         resp.write item.price
       else
         resp.write "Item does not exist"
