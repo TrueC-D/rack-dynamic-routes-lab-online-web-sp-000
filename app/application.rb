@@ -1,3 +1,6 @@
 class Application
 
+  @@item
+    
+
 end
