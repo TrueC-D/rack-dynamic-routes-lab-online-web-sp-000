@@ -1,6 +1,5 @@
 class Application
 
-  @@item
 
 
 end
