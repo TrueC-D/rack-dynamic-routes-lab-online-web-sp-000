@@ -7,8 +7,8 @@ class Application
     req = Rack::Request.new(env)
 
     if req.path.match(/items/)
-      Item.all.include?(item_name)
-
+      item_name = req.path.split("/items/").last
+      item = Item.all.find{|i| i.name == item_name}
       resp.write item.price
     else
       resp.write "Route not found"
