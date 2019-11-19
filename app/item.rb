@@ -9,7 +9,7 @@ class Item
     @@items << self
   end
 
-  def all
+  def self.all
     @@items
   end
 end
